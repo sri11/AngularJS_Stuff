@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+
+<head>
+    <title>Learn and Understand AngularJS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <style>
+        html,
+        body,
+        input,
+        select,
+        textarea {
+            font-size: 1.05em;
+        }
+    </style>
+
+    <!-- load angular via CDN -->
+
+    <script src="./bower_components/angular-1.5.9/angular.js"></script>
+    <script src="./bower_components/angular-1.5.9/angular-messages.js"></script>
+    <script src="./bower_components/angular-1.5.9/angular-resource.js"></script>
+     <script src="./bower_components/angular-1.5.9/angular-route.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">AngularJS</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div ng-controller="parentController as parentCtrl">
+        <div ng-controller="childController as childCtrl">
+            <span> {{parentCtrl.txt}}</span><hr/>
+            <span> {{childCtrl.txt}}</span><hr/>          
+      
+        </div>
+    </div>
+
+    <div class="container" ng-controller="parentController">
+        <input type="text" value="{{txt}}" />
+        <input type="button" class="btn-primary" value="Check" ng-click="check()"/>
+      <div ng-view>
+        </div>
+        
+        
+    </div>
+
+</body>
+
+</html>
