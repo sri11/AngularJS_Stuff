@@ -1,0 +1,15 @@
+<!--<h1>This is {{name}} application</h1>
+<hr>-->
+<lable>Search</lable>
+<input type="text" ng-model="Doe">
+
+<h3>Search Results</h3>
+<div class="list-group" ng-repeat="person in people">
+    <search-result person-object="person" formatted-address-function="formattedAddress(aperson)">
+        *search results may not be valid
+    </search-result>
+  <!--<search-result person-name="{{person.name}}" person-address="{{person.address}}"></search-result>-->
+    <!--<div search-result></div>
+    <div class="search-result"></div>-->
+    <!--directive: search-result-->
+</div>

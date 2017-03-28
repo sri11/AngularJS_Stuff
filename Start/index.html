@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+
+<head>
+    <title>Learn and Understand AngularJS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <style>
+        html,
+        body,
+        input,
+        select,
+        textarea {
+            font-size: 1.05em;
+        }
+    </style>
+
+    <!-- load angular via CDN -->
+
+    <script src="./bower_components/angular-1.5.9/angular.js"></script>
+    <script src="./bower_components/angular-1.5.9/angular-messages.js"></script>
+    <script src="./bower_components/angular-1.5.9/angular-resource.js"></script>
+     <script src="./bower_components/angular-1.5.9/angular-route.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">AngularJS</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#/second"><i></i> Second</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <div ng-view>
+        </div>  
+        
+         <!-- <div ng-controller="mainController">
+            <form name="myForm">
+                <input type="text" ng-model="field" name="myField" required minlength="5" />
+                <div ng-messages="myForm.myField.$error">
+                    <div class="alert alert-danger" ng-message="required">You donot enter the Field</div>
+                    <div class="alert alert-warning" ng-message="minlength">The value you entered is two short</div>
+                </div>
+            </form>
+            <h2 ng-cloak>Hello {{name+'.How are you?'}}</h2>
+            <div>
+                <label>what is your twitter handle?</label>
+                <input type="text" ng-model="handle">
+            </div>
+            <div class="alert alert-info" ng-class="{'alert-warning':handle.length < characters,'alert-danger':handle.length > characters}" ng-if="handle.length !== characters">
+                Must be 5 characters!
+            </div>
+            <div class="alert alert-warning ng-hide" ng-show="handle.length >characters">
+                Must show 5 characters!
+            </div>
+            <div class="alert alert-danger ng-hide" ng-hide="handle.length < characters">
+                Must hide 5 characters!
+            </div>
+            <hr/>
+            <h1>tiwitter.com/{{lowercasehandle()}}</h1>
+            <h3>Rules!!!</h3>
+        <ul>
+            <li ng-repeat="rule in rules">
+                {{rule.name}}
+            </li>
+        </ul>
+        </div>
+-->
+    </div>
+
+</body>
+
+</html>
